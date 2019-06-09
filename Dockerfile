@@ -3,6 +3,7 @@ COPY . /usr/src/myapp
 RUN chmod +x /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN gcc -o myapp main.c
+VOLUME /var/run/docker.sock:/var/run/docker.sock  
 
 EXPOSE 8080
 ENV DB db
